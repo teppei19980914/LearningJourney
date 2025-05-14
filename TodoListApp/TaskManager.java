@@ -11,8 +11,8 @@ import java.util.List;
 import java.util.Scanner;
 
 public class TaskManager extends JFrame {
-    private static String TASK_DIRECTORY = "./Data"; // ディレクトリ
-    private static String TASK_FILE = TASK_DIRECTORY + "/sample.csv"; // タスク保存用ファイル
+    private static String TASK_DIRECTORY = "./TodoListApp/Data/"; // ディレクトリ
+    private static String TASK_FILE = TASK_DIRECTORY + "sample.csv"; // タスク保存用ファイル
 
     private JTable taskTable;
     private DefaultTableModel tableModel;

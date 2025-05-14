@@ -1,5 +1,9 @@
 import TodoListApp.TaskManager;
 import TimerApp.TimerApp;
+import CalendarApp.CalendarApp;
+
+import java.time.YearMonth;
+
 import javax.swing.*;
 
 public class LeaningJourney extends JFrame {
@@ -18,6 +22,11 @@ public class LeaningJourney extends JFrame {
         // TaskManagerをインスタンス化し、ContentPaneをタブに追加
         TaskManager taskManager = new TaskManager();
         tabbedPane.addTab("ToDoリスト", taskManager.getContentPane());
+
+        // CalendarAppをインスタンス化し、ContentPaneをタブに追加
+        YearMonth now = YearMonth.now();
+        CalendarApp calendarApp = new CalendarApp(now);
+        tabbedPane.addTab("カレンダー", calendarApp.getContentPane());
 
         // タブペインをメインフレームに追加
         add(tabbedPane);
